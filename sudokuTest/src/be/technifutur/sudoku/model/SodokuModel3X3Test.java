@@ -55,7 +55,7 @@ public class SodokuModel3X3Test {
 
     @Test
     @DisplayName("Une case vide contient la valeur EMPTY_VALUE")
-    void testEmptyCellIs0() {
+    void testEmptyCell3_3Is0() {
         SudokuModel3X3 sudoku = new SudokuModel3X3();
         Assertions.assertEquals(SudokuModel3X3.EMPTY_VALUE, sudoku.getValue(3,3));
     }

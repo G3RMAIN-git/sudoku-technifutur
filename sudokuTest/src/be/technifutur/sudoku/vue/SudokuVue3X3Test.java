@@ -8,7 +8,7 @@ public class SudokuVue3X3Test {
 
     @Test
     @DisplayName("grille vide")
-    void test() {
+    void testEmptyGrid() {
         SudokuVue3X3 vue = new SudokuVue3X3();
         String grille =
                 """

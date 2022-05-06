@@ -21,13 +21,35 @@ public class SodokuModel4x4Test {
     @DisplayName("la taille d'une ligne de sudoku 4x4 est de 4")
     void testLigneSize() {
         SudokuModel4x4 sudoku = new SudokuModel4x4();
-        Assertions.assertEquals(4,sudoku.getLineSize());
+        Assertions.assertEquals(4, sudoku.getLineSize());
     }
 
     @Test
     @DisplayName("la taille d'une colonne de sudoku 4x4 est de 4")
     void testColumnSize() {
         SudokuModel4x4 sudoku = new SudokuModel4x4();
-        Assertions.assertEquals(4,sudoku.getColumnSize());
+        Assertions.assertEquals(4, sudoku.getColumnSize());
     }
+
+    @Test
+    @DisplayName("après modification de la case 3,2 par '3' sa valeur est '3'")
+    void testCell3_2getValueIs_3() {
+        SudokuModel4x4 sudoku = new SudokuModel4x4();
+        sudoku.setValue(3, 2, '3');
+        Assertions.assertEquals('3', sudoku.getValue(3, 2));
+    }
+
+    @Test
+    @DisplayName("EMPTY_VALUE vaut le caractère de code 0")
+    void testEmptyValueIs0() {
+        Assertions.assertEquals(0, SudokuModel4x4.EMPTY_VALUE);
+    }
+
+    @Test
+    @DisplayName("Une case vide contient la valeur EMPTY_VALUE")
+    void testEmptyCell3_3Is0() {
+        SudokuModel4x4 sudoku = new SudokuModel4x4();
+        Assertions.assertEquals(SudokuModel4x4.EMPTY_VALUE, sudoku.getValue(3, 3));
+    }
+
 }

@@ -1,20 +1,20 @@
 package be.technifutur.sudoku.controler;
 
-import be.technifutur.sudoku.model.SudokuModel9x9;
+import be.technifutur.sudoku.model.SudokuModel4x4;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class SudokuInitControlerTest {
+public class SudokuInitControler4x4Test {
 
     private SudokuInitControler controler;
-    private SudokuModel9x9 model;
+    private SudokuModel model;
 
     @BeforeEach
-    void ini() {
+    void init() {
         controler = new SudokuInitControler();
-        model = new SudokuModel9x9();
+        model = new SudokuModel4x4();
         controler.setSudoku(model);
     }
 
@@ -32,9 +32,9 @@ public class SudokuInitControlerTest {
     }
 
     @Test
-    @DisplayName("ajout valeur 9 en 9,9")
-    void testAddValue9inl9c9() {
-        controler.request("9.9.9");
-        Assertions.assertEquals('9', model.getValue(8, 8));
+    @DisplayName("ajout valeur 4 en 4,4")
+    void testAddValue4inl4c4() {
+        controler.request("4.4.4");
+        Assertions.assertEquals('4', model.getValue(3, 3));
     }
 }

@@ -31,6 +31,15 @@ public class SodokuModel4x4Test {
         Assertions.assertEquals(4, sudoku.getColumnSize());
     }
 
+
+    @Test
+    @DisplayName("après modification la case 1,2 n'est plus vide")
+    void testCell1_2IsNotEmpty() {
+        SudokuModel4x4 sudoku = new SudokuModel4x4();
+        sudoku.setValue(1, 2, '1');
+        Assertions.assertFalse(sudoku.isEmpty(1, 2));
+    }
+
     @Test
     @DisplayName("après modification de la case 3,2 par '3' sa valeur est '3'")
     void testCell3_2getValueIs_3() {

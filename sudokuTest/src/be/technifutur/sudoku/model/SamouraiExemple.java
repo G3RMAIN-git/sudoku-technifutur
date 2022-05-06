@@ -1,6 +1,8 @@
 package be.technifutur.sudoku.model;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public enum SamouraiExemple {
     FACILE_1("""
@@ -26,19 +28,44 @@ public enum SamouraiExemple {
             ...2.8...///2...3..75
             ...5....1///.3..1.6..
             """);
-    private final String values;
+    private final char[][] values;
 
     SamouraiExemple(String values) {
-        this.values = values;
+        Scanner scan = new Scanner(values);
+        this.values = new char[21][];
+        for (int lig = 0; lig < 21; lig++) {
+            this.values[lig] = scan.nextLine().toCharArray();
+        }
+    }
+
+    /**
+     * retourne un stream de toutes les requêtes utiles pour initialiser le sudoku avec le controleur
+     *
+     * @return le stream des requêtes.
+     */
+    public Stream<String> requestStream() {
+        return IntStream
+                .range(0, 21 * 21)
+                .filter(this::hasValue)
+                .mapToObj(
+                        i -> (i / 21 + 1) + "." + (i % 21 + 1) + "." + get(i)
+                );
+    }
+
+    public boolean hasValue(int i) {
+        char c = get(i);
+        return c != '.' && c != '/';
+    }
+
+    public char get(int pos) {
+        return values[pos / 21][pos % 21];
     }
 
     public void init(SamouraiSudokuModel sudo) {
-        Scanner scan = new Scanner(values);
         for (int lig = 0; lig < 21; lig++) {
-            char[] line = scan.nextLine().toCharArray();
             for (int col = 0; col < 21; col++) {
-                if (line[col] != '.' && line[col] != '/') {
-                    sudo.setValue(lig, col, line[col]);
+                if (hasValue(lig * 21 + col)) {
+                    sudo.setValue(lig, col, values[lig][col]);
                 }
             }
         }

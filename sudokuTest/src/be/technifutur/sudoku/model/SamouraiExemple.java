@@ -39,7 +39,8 @@ public enum SamouraiExemple {
     }
 
     /**
-     * retourne un stream de toutes les requêtes utiles pour initialiser le sudoku avec le controleur
+     * Retourne un stream de toutes les requêtes utiles pour initialiser le sudoku avec le controleur.
+     * les requêtes ont le format {ligne}.{colonne}.{valeur}
      *
      * @return le stream des requêtes.
      */

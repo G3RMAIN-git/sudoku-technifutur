@@ -6,24 +6,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println(new SudokuVue9x9().getGrilleVide());
+        /*System.out.println(new SudokuVue4x4().getGrilleVide());
         System.out.println("------------------------------");
         String grille = """
-                +-------+-------+-------+
-                | . . . | . . . | . . . |
-                | . . . | . . . | . . . |
-                | . . . | . . . | . . . |
-                +-------+-------+-------+
-                | . . . | . . . | . . . |
-                | . . . | . . . | . . . |
-                | . . . | . . . | . . . |
-                +-------+-------+-------+
-                | . . . | . . . | . . . |
-                | . . . | . . . | . . . |
-                | . . . | . . . | . . . |
-                +-------+-------+-------+
-                """;
-        System.out.println(grille.replace(".","%s"));
+                        +------+-----+
+                        | . .  | . . |
+                        | . .  | . . |
+                        +------+-----+
+                        | . .  | . . |
+                        | . .  | . . |
+                        +------+-----+
+                        """;
+        System.out.println(grille.replace(".","%s"));*/
 
     }
 

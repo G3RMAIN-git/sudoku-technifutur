@@ -13,7 +13,11 @@ public class SudokuModel4x4 {
     }
 
     public boolean isEmpty(int line, int column) {
-        return true;
+        if (grille[line][column]==EMPTY_VALUE){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public void setValue(int ligne, int colone, char valeur) {

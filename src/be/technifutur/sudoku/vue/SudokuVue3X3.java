@@ -2,6 +2,7 @@ package be.technifutur.sudoku.vue;
 
 public class SudokuVue3X3 {
 
+
     public String getGrilleVide() {
 
         return """
@@ -19,6 +20,9 @@ public class SudokuVue3X3 {
                 | . . . | . . . | . . . |
                 +-------+-------+-------+
                 """;
+
+
+
     }
 
 

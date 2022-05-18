@@ -1,6 +1,6 @@
 package be.technifutur.sudoku.model;
 
-public class SudokuModel3X3 {
+public class SudokuModel9x9 {
 
     char[][] grille = new char[9][9];
 

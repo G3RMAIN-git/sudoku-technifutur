@@ -1,6 +1,6 @@
 package be.technifutur.sudoku.vue;
 
-public class SudokuVue3X3 {
+public class SudokuVue9x9 {
 
 
     public String getGrilleVide() {

@@ -28,9 +28,9 @@ public class SudokuModel9x9 {
     public void setValue(int ligne, int colone, char valeur) {
         /*for(int ligne=0;ligne<grille.length;ligne++){
             for(int collone=0;collone<grille[ligne].length;collone++){
-                /*if (ligne==1 && collone == 2){
+
                     grille[ligne][collone]=2;
-                }
+
             }
         }*/
 

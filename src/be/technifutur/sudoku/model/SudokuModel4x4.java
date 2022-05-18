@@ -1,6 +1,6 @@
 package be.technifutur.sudoku.model;
 
-public class SudokuModel2X2 {
+public class SudokuModel4x4 {
     public int getLineSize() {
         return 4;
     }

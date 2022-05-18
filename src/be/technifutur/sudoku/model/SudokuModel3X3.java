@@ -2,8 +2,9 @@ package be.technifutur.sudoku.model;
 
 public class SudokuModel3X3 {
 
+    char[][] grille = new char[9][9];
 
-    public static final char EMPTY_VALUE = ' ';
+    public static final char EMPTY_VALUE = 0;
 
     public int getLineSize() {
         return 9;
@@ -14,14 +15,30 @@ public class SudokuModel3X3 {
     }
 
     public boolean isEmpty(int line, int column) {
-        return true;
+
+        if (grille[line][column]==EMPTY_VALUE){
+            return true;
+        }else{
+            return false;
+        }
+
+
     }
 
-    public void setValue(int i, int i1, char c) {
-        
+    public void setValue(int ligne, int colone, char valeur) {
+        /*for(int ligne=0;ligne<grille.length;ligne++){
+            for(int collone=0;collone<grille[ligne].length;collone++){
+                /*if (ligne==1 && collone == 2){
+                    grille[ligne][collone]=2;
+                }
+            }
+        }*/
+
+        grille[ligne][colone]=valeur;
     }
 
-    public char getValue(int i, int i1) {
-        return 3;
+    public char getValue(int ligne, int colonne) {
+        char value = grille[ligne][colonne] ;
+        return value;
     }
 }

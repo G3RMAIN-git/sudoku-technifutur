@@ -1,6 +1,6 @@
 package be.technifutur.sudoku.model;
 
-public class StarSudokuModel {
+public class SamouraiSudokuModel {
 
     char[][] grille = new char[21][21];
 

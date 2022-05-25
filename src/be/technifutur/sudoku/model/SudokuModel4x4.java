@@ -1,6 +1,8 @@
 package be.technifutur.sudoku.model;
 
-public class SudokuModel4x4 {
+import be.technifutur.sudoku.controler.SudokuModel;
+
+public class SudokuModel4x4 implements SudokuModel {
 
     public static final char EMPTY_VALUE = 0;
     char[][] grille = new char[4][4];
@@ -30,5 +32,15 @@ public class SudokuModel4x4 {
     public char getValue(int ligne, int colonne) {
         char value = grille[ligne][colonne] ;
         return value;
+    }
+
+    @Override
+    public char getSudoku(int ligne, int colonne) {
+        return 0;
+    }
+
+    @Override
+    public void setSudoku(int ligne, int colonne, char value) {
+
     }
 }

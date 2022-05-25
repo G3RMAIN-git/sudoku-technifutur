@@ -1,6 +1,9 @@
 package be.technifutur.sudoku.model;
 
-public class SamouraiSudokuModel {
+
+import be.technifutur.sudoku.controler.SudokuModel;
+
+public class SamouraiSudokuModel implements SudokuModel {
 
     char[][] grille = new char[21][21];
 
@@ -64,5 +67,14 @@ public class SamouraiSudokuModel {
         }
     }
 
+    @Override
+    public char getSudoku(int ligne, int colonne) {
+        return 0;
+    }
+
+    @Override
+    public void setSudoku(int ligne, int colonne, char value) {
+
+    }
 }
 

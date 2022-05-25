@@ -1,11 +1,13 @@
 package be.technifutur.sudoku.controler;
 
+import be.technifutur.sudoku.model.SamouraiSudokuModel;
 import be.technifutur.sudoku.model.SudokuModel9x9;
 
 public class SudokuInitControler {
 
-    SudokuModel9x9 Model99 ;
+    SudokuModel9x9 Model99;
     //Model99 = setValue(Model99,1,2,3);
+    SamouraiSudokuModel SamuSudoku;
 
     int value;
     //char[][] grille = new char[9][9];
@@ -14,16 +16,15 @@ public class SudokuInitControler {
     }*/
 
 
-
     public void setSudoku(SudokuModel9x9 model) {//a travailler
         Model99 = model;
     }
-    public void setValue(SudokuModel9x9 model,int ligne, int colonne, int valeur) {//a travailler
-        setValue(Model99,1,2,3);
+
+    public void setValue(SudokuModel9x9 model, int ligne, int colonne, int valeur) {//a travailler
+        setValue(Model99, 1, 2, 3);
     }
 
     public SudokuModel9x9 getSudoku() {
-
 
 
         //return Model99;
@@ -40,9 +41,9 @@ public class SudokuInitControler {
 
         int ligne = Integer.parseInt(recutravaille[0]);
         int colonne = Integer.parseInt(recutravaille[1]);
-        char  c = recutravaille[2].charAt(0);
+        char c = recutravaille[2].charAt(0);
 
-        Model99.setValue(ligne-1,colonne-1,c);
+        Model99.setValue(ligne - 1, colonne - 1, c);
     }
 
     /*public AddValue(int ligne,int colone,int valeur){
@@ -52,9 +53,10 @@ public class SudokuInitControler {
     }*/
 
 
-
+    //public int getValue(SamouraiSudokuModel mod,int ligne, int colone)
     public int getValue(int ligne, int colone) {
-        value = getValue(8, 8);
+        //value = getValue(SamuSudoku,ligne, colone);
+        value = getValue(ligne, colone);
 
         return value;
     }

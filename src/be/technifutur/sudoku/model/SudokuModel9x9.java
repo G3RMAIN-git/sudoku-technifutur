@@ -1,6 +1,8 @@
 package be.technifutur.sudoku.model;
 
-public class SudokuModel9x9 {
+import be.technifutur.sudoku.controler.SudokuModel;
+
+public class SudokuModel9x9 implements SudokuModel {
 
     char[][] grille = new char[9][9];
 
@@ -40,5 +42,15 @@ public class SudokuModel9x9 {
     public char getValue(int ligne, int colonne) {
         char value = grille[ligne][colonne] ;
         return value;
+    }
+
+    @Override
+    public char getSudoku(int ligne, int colonne) {
+        return 0;
+    }
+
+    @Override
+    public void setSudoku(int ligne, int colonne, char value) {
+
     }
 }

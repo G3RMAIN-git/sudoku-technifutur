@@ -5,7 +5,7 @@ import be.technifutur.sudoku.model.SudokuModel9x9;
 
 public class SudokuInitControler {
 
-    SudokuModel9x9 Model99;
+    SudokuModel modelle;
     //Model99 = setValue(Model99,1,2,3);
     SamouraiSudokuModel SamuSudoku;
 
@@ -16,20 +16,20 @@ public class SudokuInitControler {
     }*/
 
 
-    public void setSudoku(SudokuModel9x9 model) {//a travailler
-        Model99 = model;
+    public void setSudoku(SudokuModel model) {//a travailler
+        modelle = model;
     }
 
-    public void setValue(SudokuModel9x9 model, int ligne, int colonne, int valeur) {//a travailler
-        setValue(Model99, 1, 2, 3);
+    public void setValue(SudokuModel model, int ligne, int colonne, int valeur) {//a travailler
+        setValue(modelle, 1, 2, 3);
     }
 
-    public SudokuModel9x9 getSudoku() {
+    public SudokuModel getSudoku() {
 
 
         //return Model99;
         //return ("be.technifutur.sudoku.model.SudokuModel9x9@57d5872c");
-        return Model99;
+        return modelle;
     }// a travailler
 
     public void request(String s) {
@@ -43,7 +43,7 @@ public class SudokuInitControler {
         int colonne = Integer.parseInt(recutravaille[1]);
         char c = recutravaille[2].charAt(0);
 
-        Model99.setValue(ligne - 1, colonne - 1, c);
+        modelle.setValue(ligne - 1, colonne - 1, c);
     }
 
     /*public AddValue(int ligne,int colone,int valeur){
@@ -60,6 +60,7 @@ public class SudokuInitControler {
 
         return value;
     }
+
 
 
 }

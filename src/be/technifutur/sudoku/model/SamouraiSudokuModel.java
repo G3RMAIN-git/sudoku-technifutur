@@ -67,14 +67,6 @@ public class SamouraiSudokuModel implements SudokuModel {
         }
     }
 
-    @Override
-    public char getSudoku(int ligne, int colonne) {
-        return 0;
-    }
 
-    @Override
-    public void setSudoku(int ligne, int colonne, char value) {
-
-    }
 }
 

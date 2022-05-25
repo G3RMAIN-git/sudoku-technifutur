@@ -40,17 +40,10 @@ public class SudokuModel9x9 implements SudokuModel {
     }
 
     public char getValue(int ligne, int colonne) {
-        char value = grille[ligne][colonne] ;
-        return value;
+        //char value = grille[ligne][colonne] ;
+        //return value;
+        return grille[ligne][colonne];
     }
 
-    @Override
-    public char getSudoku(int ligne, int colonne) {
-        return 0;
-    }
 
-    @Override
-    public void setSudoku(int ligne, int colonne, char value) {
-
-    }
 }

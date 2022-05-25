@@ -34,13 +34,5 @@ public class SudokuModel4x4 implements SudokuModel {
         return value;
     }
 
-    @Override
-    public char getSudoku(int ligne, int colonne) {
-        return 0;
-    }
 
-    @Override
-    public void setSudoku(int ligne, int colonne, char value) {
-
-    }
 }
